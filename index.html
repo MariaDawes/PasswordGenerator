@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+
+</head>
+<!-- End Head-->
+
+<style>
+  body {
+    background: rgb(209, 241, 240)
+  }
+
+  .header1 {
+    margin-left: 585px;
+  }
+
+  .header2 {
+    margin-left: 100px;
+  }
+
+
+  h1 {
+    color: rgb(8, 26, 107);
+    font-weight: bold;
+    font-size: 55px;
+    margin-left: 498px;
+  }
+
+  h2 {
+    color: rgb(8, 26, 107);
+    font-weight: bold;
+  }
+
+  h3 {
+    color: rgb(148, 151, 161);
+    font-weight: bold;
+    font-size: 20px;
+    border-style:dashed;
+    text-align: center;
+    padding: 60px;
+
+  }
+
+</style>
+
+<!-- Body -->
+
+<body>
+  <br>
+  <h1>Password Generator</h1>
+  <br>
+  <br>
+  <br>
+  
+  <!-- Card -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+
+          <!-- Card Row 1 - Generate a password title-->
+          <div class="card-body">
+            <h2>Generate a Password</h2>
+            <hr>
+            <br>
+          </div>
+          <!-- End Card Row 1 -->
+
+
+          <!-- Card Row 2 - Your secure password box display-->
+          <div class="row">
+
+            <div class="col-lg-4">
+              <div class="form-label-group">
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="form-label-group">
+                <h3>Your secure password</h3>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="form-label-group">
+                </div>
+              </div>
+
+          </div>
+          <br>
+          <br>
+          <!-- End Card Row 2 -->
+
+
+          <!-- Card Row 3 - generate password and copy to clipboard buttons -->
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card">
+                <button id="generate">Generate Password</button>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <button id="copy">Copy to Clipboard</button>
+              </div>
+            </div>
+          </div>
+          <!-- End Card Row 3 -->
+        </div>
+      </div>
+    </div>
+  </div> <!-- End - Card -->
+
+  
+  
+  <script>
+        
+        //Loop for number of characters verification
+        var plenght=prompt("How many characters? (8 to 128)");
+        while ((plenght < 8 ) || (plenght > 128)){
+            var plenght=prompt("How many characters? (8 to 128)");
+        }
+                  
+          
+        //Loop for type of special characters preference
+ //       var oneistrue = 1
+  //      while (oneistrue = 1) {
+  //          var schar=confirm("Do you want special characters?");
+ //           alert (schar);
+ //           var nchar=confirm("Do you want numbers?");
+ //           alert (nchar);
+//            var lchar=confirm("Do you want lower case letters?");
+//            alert (lchar);
+//            var uchar=confirm("Do you want upper case letters?");
+//            alert (uchar);
+ //       
+ //           If (schar = true) || (nchar = true) || (lchar = true) || (uchar = true);{
+//              var oneistrue = oneistrue + 1; 
+//          alert ("in if");
+//        }
+//        alert (oneistrue);
+//        }
+alert ("estou aqui")
+var schar = true;
+var nchar = true;
+var lchar = true;
+var uchar = true;
+
+alert ("antes do loop"); 
+alert (schar);
+alert (nchar);
+alert (lchar);
+alert (uchar);
+
+while ((schar = true) || (nchar = true) || (lchar = true) || (uchar = true)){
+            var schar=confirm("Do you want special characters?");
+            alert (schar);
+            alert ("dentro do loop")
+            var nchar=confirm("Do you want numbers?");
+            alert (nchar);
+            var lchar=confirm("Do you want lower case letters?");
+            alert (lchar);
+            var uchar=confirm("Do you want upper case letters?");
+            alert (uchar);
+}    
+alert ("acabei o loop"); 
+alert (schar);
+alert (nchar);
+alert (lchar);
+alert (uchar);
+
+
+
+
+  </script>
+</body>
+<!-- End body -->
+</html>
