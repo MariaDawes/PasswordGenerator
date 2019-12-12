@@ -141,59 +141,74 @@
   
   <script>
         
-        //Loop for number of characters verification
-        var plenght=prompt("How many characters? (8 to 128)");
+    //Loop for number of characters verification
+       var plenght=prompt("How many characters? (8 to 128)");
         while ((plenght < 8 ) || (plenght > 128)){
+            alert ("Accepts 8 to 128 characters passwords"); 
             var plenght=prompt("How many characters? (8 to 128)");
         }
-                  
-          
-        //Loop for type of special characters preference
- //       var oneistrue = 1
-  //      while (oneistrue = 1) {
-  //          var schar=confirm("Do you want special characters?");
- //           alert (schar);
- //           var nchar=confirm("Do you want numbers?");
- //           alert (nchar);
-//            var lchar=confirm("Do you want lower case letters?");
-//            alert (lchar);
-//            var uchar=confirm("Do you want upper case letters?");
-//            alert (uchar);
- //       
- //           If (schar = true) || (nchar = true) || (lchar = true) || (uchar = true);{
-//              var oneistrue = oneistrue + 1; 
-//          alert ("in if");
-//        }
-//        alert (oneistrue);
-//        }
-alert ("estou aqui")
-var schar = true;
-var nchar = true;
-var lchar = true;
-var uchar = true;
+                 
+     //Loop for type of special characters preference
 
-alert ("antes do loop"); 
-alert (schar);
-alert (nchar);
-alert (lchar);
-alert (uchar);
+        var schar = false;
+        var nchar = false;
+        var lchar = false;
+        var uchar = false;
 
-while ((schar = true) || (nchar = true) || (lchar = true) || (uchar = true)){
-            var schar=confirm("Do you want special characters?");
-            alert (schar);
-            alert ("dentro do loop")
-            var nchar=confirm("Do you want numbers?");
-            alert (nchar);
-            var lchar=confirm("Do you want lower case letters?");
-            alert (lchar);
-            var uchar=confirm("Do you want upper case letters?");
-            alert (uchar);
-}    
-alert ("acabei o loop"); 
-alert (schar);
-alert (nchar);
-alert (lchar);
-alert (uchar);
+        console.log ("Before the loop"); 
+
+        while ((schar !== true) && (nchar !== true) && (lchar !== true) && (uchar !== true)){
+           var schar=confirm("Do you want special characters?");
+           alert ("dentro do loop");
+           var nchar=confirm("Do you want numbers?");
+           var lchar=confirm("Do you want lower case letters?");
+           var uchar=confirm("Do you want upper case letters?");
+        }    
+
+        alert ("acabei o loop"); 
+        alert (schar);
+        alert (nchar);
+        alert (lchar);
+        alert (uchar);
+
+
+        // Create Array with all characters 
+
+            for (var i = 0; i < 95; i++){
+              Array[i] = "0";
+            }
+
+            var Aindex = 0
+
+            if (schar === true){
+                console.log("in the special characters");
+                var Array = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+                var Array = str.split("");
+                var Aindex = Aindex + 32
+                }
+            if (nchar === true){
+                console.log("in the numbers");
+                var Array = ["0","1","2","3","4","5","6","7","8","9"];
+                var Aindex = Aindex + 11;
+              }
+            if (lchar === true){
+                console.log("in the lower case");
+                var Array = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+                var Aindex = Aindex + 27;
+              }
+            if (uchar === true){
+                console.log("in the loop");
+                var Array = ["A","B","C","D","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+                var Aindex = Aindex + 27;
+              }    
+                                   
+            alert(Array[5]);
+            alert(Array[35]);
+            alert(Array[45]);
+            alert(Array[86]);
+
+            
+                             
 
 
 
