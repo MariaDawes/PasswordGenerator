@@ -136,16 +136,15 @@
       </div>
     </div>
   </div> <!-- End - Card -->
-
   
-  
+   
   <script>
         
     //Loop for number of characters verification
-       var plenght=prompt("How many characters? (8 to 128)");
-        while ((plenght < 8 ) || (plenght > 128)){
+       var plength=prompt("How many characters? (8 to 128)");
+        while ((plength < 8 ) || (plength > 128)){
             alert ("Accepts 8 to 128 characters passwords"); 
-            var plenght=prompt("How many characters? (8 to 128)");
+            var plength=prompt("How many characters? (8 to 128)");
         }
                  
      //Loop for type of special characters preference
@@ -159,59 +158,116 @@
 
         while ((schar !== true) && (nchar !== true) && (lchar !== true) && (uchar !== true)){
            var schar=confirm("Do you want special characters?");
-           alert ("dentro do loop");
            var nchar=confirm("Do you want numbers?");
            var lchar=confirm("Do you want lower case letters?");
            var uchar=confirm("Do you want upper case letters?");
         }    
 
-        alert ("acabei o loop"); 
-        alert (schar);
-        alert (nchar);
-        alert (lchar);
-        alert (uchar);
+        console.log ("acabei o loop"); 
+        console.log ("just got schar" + schar);
+        console.log ("just got nchar" + nchar);
+        console.log ("just got lchar" + lchar);
+        console.log ("just got uchar" + uchar);
 
-
-        // Create Array with all characters 
-
-            for (var i = 0; i < 95; i++){
-              Array[i] = "0";
-            }
-
-            var Aindex = 0
-
+        
+        
+        // Create Arrays with all characters 
+            
             if (schar === true){
                 console.log("in the special characters");
-                var Array = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-                var Array = str.split("");
-                var Aindex = Aindex + 32
-                }
+                var specialArray = ["!"," ","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","{","|","}","~","'","^","`","_"];            
+              } 
             if (nchar === true){
                 console.log("in the numbers");
-                var Array = ["0","1","2","3","4","5","6","7","8","9"];
-                var Aindex = Aindex + 11;
+                var numberArray = ["0","1","2","3","4","5","6","7","8","9"];
               }
             if (lchar === true){
                 console.log("in the lower case");
-                var Array = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-                var Aindex = Aindex + 27;
+                var lowerArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
               }
             if (uchar === true){
                 console.log("in the loop");
-                var Array = ["A","B","C","D","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-                var Aindex = Aindex + 27;
+                var upperArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
               }    
                                    
-            alert(Array[5]);
-            alert(Array[35]);
-            alert(Array[45]);
-            alert(Array[86]);
+              // console.log ("array  sc" + specialArray[1]);
+              // console.log ("array  sc" + specialArray[2]);
+              // console.log ("array  sc" + specialArray[3]);
+              
+              // console.log ("array  sc" + numberArray[1]);
+              // console.log ("array  sc" + numberArray[2]);
+              // console.log ("array  sc" + numberArray[3]);
+
+              // console.log ("array  sc" + lowerArray[1]);
+              // console.log ("array  sc" + lowerArray[2]);
+              // console.log ("array  sc" + lowerArray[3]);
+
+              // console.log ("array  sc" + upperArray[22]);
+              // console.log ("array  sc" + upperArray[23]);
+              // console.log ("array  sc" + upperArray[24]);
 
             
-                             
+              var greatArray = specialArray.concat(numberArray, lowerArray, upperArray);
 
 
+                // if (schar === true) && (nchar === false) && (lchar === false) && (uchar === false){
+                //     var greatArray = specialArray;
+                //     } 
+                // if (schar === true) && (nchar === true) && (lchar === false) && (uchar === false){
+                //     var greatArray = specialArray.concat(numberArray);
+                //     } 
+                // if (schar === true) && (nchar === true) && (lchar === true) && (uchar === false){
+                //     var greatArray = specialArray.concat(numberArray, lowerArray);
+                //     } 
+                // if (schar === true) && (nchar === true) && (lchar === true) && (uchar === true){
+                //     var greatArray = specialArray.concat(numberArray, lowerArray, upperArray);
+                //     } 
+                // if (schar === false) && (nchar === true) && (lchar === true) && (uchar === true){
+                //     var greatArray = numberArray.concat(lowerArray, upperArray);
+                //     } 
+                // if (schar === false) && (nchar === false) && (lchar === true) && (uchar === true){
+                //     var greatArray = lowerArray.concat(upperArray);
+                //     } 
+                // if (schar === false) && (nchar === false) && (lchar === false) && (uchar === true){
+                //     var greatArray = upperArray;
+                //     }    
+              
+              console.log ("big array 0..." + greatArray[0]);
+              console.log ("big array 10..." + greatArray[10]);
+              console.log ("big array 20..." + greatArray[20]);
+              console.log ("big array 30..." + greatArray[30]);
+              console.log ("big array 40..." + greatArray[40]);
+              console.log ("big array 50..." + greatArray[50]);
 
+              console.log ("lengh pass:..." + plength);
+
+            // Create passwordArray and randomArray with lenght the user specified  
+            var passwordArray = [];
+            passwordArray.length = plength;
+
+            var randomArray = [];
+            randomArray.length = plength;
+
+            // Loop to create the random interger for as many times as the lenght the user specified
+            for (var i = 0; i < plength; i++) { 
+                randomArray [i] = Math.floor(Math.random() * 9);
+            }
+            
+            //Loop to find the character in greatArray and put it in the passwordArray
+            for (var i = 0; i < plength; i++) { 
+                var index =  randomArray [i]  
+                passwordArray [i] = greatArray [index];
+            }
+
+            console.log ("password letter 0" + passwordArray [0]);
+            console.log ("password letter 1" + passwordArray [1]);
+            console.log ("password letter 2" + passwordArray [2]);
+            console.log ("password letter 3" + passwordArray [3]);
+            console.log ("password letter 4" + passwordArray [4]);
+            console.log ("password letter 5" + passwordArray [5]);
+            console.log ("password letter 11" + passwordArray [6]);
+            console.log ("password letter 12" + passwordArray [7]);
+            console.log ("password letter 14" + passwordArray [8]);
 
   </script>
 </body>
