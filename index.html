@@ -154,8 +154,6 @@
         var lchar = false;
         var uchar = false;
 
-        console.log ("Before the loop"); 
-
         while ((schar !== true) && (nchar !== true) && (lchar !== true) && (uchar !== true)){
            var schar=confirm("Do you want special characters?");
            var nchar=confirm("Do you want numbers?");
@@ -163,11 +161,11 @@
            var uchar=confirm("Do you want upper case letters?");
         }    
 
-        console.log ("acabei o loop"); 
-        console.log ("just got schar" + schar);
-        console.log ("just got nchar" + nchar);
-        console.log ("just got lchar" + lchar);
-        console.log ("just got uchar" + uchar);
+  
+        console.log ("user choice special" + schar);
+        console.log ("user choice number" + nchar);
+        console.log ("user choice lowercase" + lchar);
+        console.log ("user choice uppercase" + uchar);
 
         
         
@@ -177,19 +175,52 @@
                 console.log("in the special characters");
                 var specialArray = ["!"," ","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","{","|","}","~","'","^","`","_"];            
               } 
+              else {
+                var specialArray = ["NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO"];            
+              }  
+              
             if (nchar === true){
                 console.log("in the numbers");
                 var numberArray = ["0","1","2","3","4","5","6","7","8","9"];
               }
+              else{
+                var numberArray = ["NO","NO","NO","NO","NO","NO","NO","NO","NO","NO"];
+              }
+
             if (lchar === true){
                 console.log("in the lower case");
                 var lowerArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
               }
+              else{
+                var lowerArray = ["NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO"];
+              }
+              
             if (uchar === true){
                 console.log("in the loop");
                 var upperArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-              }    
-                                   
+              }  
+              else{
+                var upperArray = ["NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO"];
+              }  
+              
+                        
+              
+            //   if (schar === true){
+            //     console.log("in the special characters");
+            //     var specialArray = ["!"," ","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","{","|","}","~","'","^","`","_"];            
+            //   } 
+            // if (nchar === true){
+            //     console.log("in the numbers");
+            //     var numberArray = ["0","1","2","3","4","5","6","7","8","9"];
+            //   }
+            // if (lchar === true){
+            //     console.log("in the lower case");
+            //     var lowerArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+            //   }
+            // if (uchar === true){
+            //     console.log("in the loop");
+            //     var upperArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+            //   }    
               // console.log ("array  sc" + specialArray[1]);
               // console.log ("array  sc" + specialArray[2]);
               // console.log ("array  sc" + specialArray[3]);
@@ -249,14 +280,21 @@
             randomArray.length = plength;
 
             // Loop to create the random interger for as many times as the lenght the user specified
-            for (var i = 0; i < plength; i++) { 
-                randomArray [i] = Math.floor(Math.random() * 9);
-            }
+            // for (var i = 0; i < plength; i++) { 
+            //     randomArray [i] = Math.floor(Math.random() * 93);
+            // }
             
             //Loop to find the character in greatArray and put it in the passwordArray
             for (var i = 0; i < plength; i++) { 
-                var index =  randomArray [i]  
-                passwordArray [i] = greatArray [index];
+                  randomArray [i] = Math.floor(Math.random() * 93);   
+                  var index =  randomArray [i]; 
+                  var check = greatArray [index];
+                  while (check === "NO") {
+                        randomArray [i] = Math.floor(Math.random() * 93); 
+                        var index =  randomArray [i]; 
+                        var check = greatArray [index];
+                  }
+                   passwordArray [i] = greatArray [index];
             }
 
             console.log ("password letter 0" + passwordArray [0]);
@@ -268,6 +306,8 @@
             console.log ("password letter 11" + passwordArray [6]);
             console.log ("password letter 12" + passwordArray [7]);
             console.log ("password letter 14" + passwordArray [8]);
+
+            alert (passwordArray);
 
   </script>
 </body>
