@@ -1,5 +1,5 @@
 body {
-    background: rgb(143, 221, 218)
+    background: rgb(224, 241, 241)
   }
 
   .header1 {
@@ -23,6 +23,10 @@ body {
     font-weight: bold;
   }
 
+  .form-label-group{
+    box-sizing: 500px, 50px, 300px, 50px;
+  }
+
   h3 {
     color: rgb(148, 151, 161);
     font-weight: bold;
@@ -40,4 +44,9 @@ body {
   margin: 20px 40px 20px 0;
   font-size: 20px;
   cursor: pointer;
+}
+
+#password {
+font-weight: bold;
+width: 100%;
 }

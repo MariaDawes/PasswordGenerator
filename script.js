@@ -77,7 +77,12 @@
             passwordArray [i] = greatArray [index];
      }
 
-     // Display password
-     var password = passwordArray.toString();
-     document.querySelector("#password").value = password;
-console.log (password);
+      
+  var btnGenerateEl = document.querySelector("#generate");
+
+  btnGenerateEl.addEventListener("click", function() {
+      var password = (passwordArray.join(""));
+      document.querySelector("#password").textContent = password;
+      console.log (passwordArray.join(''));
+
+  });
