@@ -1,0 +1,43 @@
+body {
+    background: rgb(143, 221, 218)
+  }
+
+  .header1 {
+    margin-left: 585px;
+  }
+
+  .header2 {
+    margin-left: 100px;
+  }
+
+
+  h1 {
+    color: rgb(8, 26, 107);
+    font-weight: bold;
+    font-size: 55px;
+    margin-left: 498px;
+  }
+
+  h2 {
+    color: rgb(8, 26, 107);
+    font-weight: bold;
+  }
+
+  h3 {
+    color: rgb(148, 151, 161);
+    font-weight: bold;
+    font-size: 20px;
+    border-style:dashed;
+    text-align: center;
+    padding: 60px;
+
+  }
+
+  button {
+  background-color: #D6EEFF;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px 40px 20px 0;
+  font-size: 20px;
+  cursor: pointer;
+}
