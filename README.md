@@ -13,6 +13,11 @@ The software will run in any webpage
 * Prompts and alerts: Verification that all input described above is correctly done via prompts and alerts.
 * Button for password generation: There is a "generate password" button in the bottom of the page that when pressed displays the new generated password in a box in the center of the page.    
 
+
+## Screenshots
+
+![alt text](./screenPG.png "Password Generator Result")
+
 ## Author
 Maria Dawes-Tedesco
 

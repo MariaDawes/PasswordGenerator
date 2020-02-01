@@ -23,7 +23,7 @@
  // Create Arrays with all characters 
      
      if (schar === true){
-         console.log("in the special characters");
+         alert("in the special characters");
          var specialArray = ["!"," ","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","{","|","}","~","'","^","`","_"];            
        } 
        else {
